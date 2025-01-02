@@ -1,0 +1,50 @@
+.content-management-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--fourth-color);
+    color: #343a40; 
+    min-height: 100vh; 
+
+}
+
+.faqs-wrapper {
+    background-color: var(--third-color);
+    font-family: 'Manrope', sans-serif;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%; 
+    max-width: 800px;
+}
+
+.faqs-wrapper h3 {
+   color: var(--fourth-color);
+}
+
+button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.faqs-wrapper .btn {
+    margin-right: 10px; 
+    margin-bottom: 10px;
+    
+}
+
+.faqs-wrapper .btn-primary {
+    color: var(--fourth-color);
+}
+
+
+

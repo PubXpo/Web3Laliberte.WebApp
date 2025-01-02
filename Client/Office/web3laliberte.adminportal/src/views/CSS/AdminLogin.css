@@ -1,0 +1,77 @@
+/* Login container styles */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Login card styling */
+.login-card {
+    background: var(--fourth-color);
+    padding: 2rem 3rem;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-subtitle {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Title styles */
+.login-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333333;
+}
+
+/* Form styling */
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label {
+    margin-top: 1rem;
+    color: #555555;
+    font-size: 0.9rem;
+}
+
+.login-form input {
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+}
+
+.login-form input:focus {
+    border-color: #007bff;
+}
+
+/* Button styling */
+.login-button {
+    padding: 12px 8px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 8px 8px var(--third-color);
+    text-decoration: none;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    color: var(--fourth-color);
+    background-color: var(--first-color);
+    transition: 0.5s;
+}
+
+.login-button:hover {
+    background-color: var(--second-color);
+}
+

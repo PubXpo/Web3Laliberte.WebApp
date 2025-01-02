@@ -1,0 +1,70 @@
+volumes:
+  Web3LApp-Data:
+    driver: local
+
+networks:
+  Web3LApp-Net:
+    external: false
+
+services:
+  # LOCAL DB: MySQL Database for Local Development
+  web3lapp-dev-db:
+    image: mysql:8.0
+    container_name: Web3LApp-DEV-DB
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - Web3LApp-Data:/var/lib/mysql
+      - ./Server/Services/Web3Laliberte.OperationsAPI/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - Web3LApp-Net
+  
+  # SERVICE 01: Web3LApp-OperationsAPI
+  web3lapp-operations:
+    build:
+      context: ../../Server/Services/Web3Laliberte.OperationsAPI
+      dockerfile: Dockerfile
+    container_name: Web3LApp-Operations-API
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://*:4000
+      DB_HOST: Web3LApp-DEV-DB
+    env_file:
+      - .env
+    depends_on:
+      - web3lapp-dev-db
+    ports:
+      - "4000:4000"
+    networks:
+      - Web3LApp-Net
+
+  
+  # SERVICE 02: Web3LApp-MarketingFrontend, ReactJS
+  web3lapp-marketing:
+    build:
+      context: ../../Client/Marketing/web3laliberte.heroview
+      dockerfile: Dockerfile
+    container_name: Web3LApp-Marketing-App
+    env_file:
+      - .env
+    ports:
+      - "4010:4010"
+    networks:
+      - Web3LApp-Net
+
+  # SERVICE 03: Web3LApp-AdminPortal, ReactJS
+  web3lapp-admin:
+    build:
+      context: ../../Client/Office/web3laliberte.adminportal
+      dockerfile: Dockerfile
+    container_name: Web3LApp-Admin-App
+    env_file:
+     - .env
+    ports:
+      - "4020:4020"
+    networks:
+      - Web3LApp-Net
+    
+  

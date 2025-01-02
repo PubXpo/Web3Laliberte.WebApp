@@ -1,0 +1,110 @@
+.home-wrapper {
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+.hero-section, .impact-section {
+    padding: 200px 0;
+    background: var(--fourth-color); 
+}
+
+.mission-section, .donate-section {
+    padding: 200px 0;
+    background: white;
+}
+
+
+.hero-content, .mission-content, .impact-content, .donate-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    flex-wrap: wrap;
+    padding-left: 100px;
+    padding-right: 100px;
+    width: 100%;
+}
+
+
+.hero-content .image-content, .mission-content .image-content, .impact-content .image-content, .donate-content .image-content {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 60px;
+    cursor: default;
+}
+
+.hero-content p {
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+    cursor: default;
+}
+
+.btn-connect {
+    width: 200px;
+    padding: 12px 8px;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 8px 8px var(--second-color);
+    text-decoration: none;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    color: var(--fourth-color);
+    background-color: var(--third-color);
+    transition: 0.5s;
+}
+
+.btn-connect:hover {
+    color: var(--fifth-color);
+    background-color: var(--first-color);
+    box-shadow: 0px 0px transparent;
+}
+
+@media (max-width: 1170px) {
+    .home-wrapper {
+        margin: 0 !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .home-wrapper {
+        margin: 80px 0 80px 0 !important;
+        text-align: center;
+        display: block;
+    }
+
+    .hero-content, .mission-content, .impact-content, .donate-content {
+        flex-direction: column;
+    }
+
+    .hero-content h2 {
+        font-size: 40px;
+        margin-bottom: 14px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    a.btn-connect {
+        margin: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+}

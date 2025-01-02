@@ -1,0 +1,71 @@
+.transaction-history-wrapper {
+    padding: 20px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.transactions-list-wrapper {
+    background-color: var(--third-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--fourth-color);
+
+}
+
+.transaction-details-card {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.transaction-details-card h5 {
+    font-family: 'Archivo', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    background: none;
+}
+
+.transaction-details-card p, .transaction-details-card h6 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.transaction-details-card hr {
+    margin: 20px 0;
+}
+
+.no-transaction-selected {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    color: gray;
+}
+
+button.btn-primary, button.btn-success, button.btn-warning, button.btn-danger {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    border-radius: .3rem;
+    color: var(--second-color);
+}
+
+button.btn-primary:hover, button.btn-success:hover, button.btn-warning:hover, button.btn-danger:hover {
+    background-color: var(--second-color);
+    border-color: var(--second-color);
+    color: var(--fourth-color);
+}
+
+
+@media (max-width: 768px) {
+
+    .transactions-list-wrapper {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+}

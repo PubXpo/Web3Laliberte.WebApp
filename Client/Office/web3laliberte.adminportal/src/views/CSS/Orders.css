@@ -1,0 +1,124 @@
+.orders-wrapper {
+    padding: 20px;
+    font-family: 'Manrope', sans-serif;
+
+}
+
+.orders-list-wrapper {
+    background-color: var(--third-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--fourth-color);
+}
+
+.order-details-card {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.order-details-card h5 {
+    font-family: 'Archivo', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    background: none;
+}
+
+.order-details-card p, .order-details-card h6 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.order-details-card hr {
+    margin: 20px 0;
+}
+
+.no-order-selected {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    color: gray;
+}
+
+.active-item {
+    background-color: var(--first-color) !important;
+    border: var(--first-color) !important;
+    color: var(--fourth-color) !important;
+}
+
+.orders-wrapper button.btn-primary, .orders-wrapper button.btn-success, .orders-wrapper button.btn-warning, .orders-wrapper button.btn-danger {
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    border-radius: .3rem;
+    color: var(--fourth-color);
+}
+
+.orders-wrapper button.btn-primary:hover, .orders-wrapper button.btn-success:hover, .orders-wrapper button.btn-warning:hover, .orders-wrapper button.btn-danger:hover {
+    background-color: var(--second-color);
+    border-color: var(--second-color);
+    color: var(--fourth-color);
+}
+
+.gifts-wrapper {
+    padding: 20px;
+    border-radius: 10px;}
+
+.gifts-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.gift-card {
+    box-sizing: border-box;
+    max-width: 100%;
+    background-color: var(--fourth-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+}
+
+.gift-card .card-title {
+    font-family: 'Archivo', sans-serif;
+    font-size: 18px;
+    padding-left: 10px;
+    
+}
+
+.gift-card .card-text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+}
+
+
+.orders-wrapper .edit-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    color: var(--third-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.orders-wrapper .edit-button:hover {
+    color: var(--first-color);
+}
+
+@media (max-width: 768px) {
+
+    .orders-list-wrapper {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+}

@@ -1,0 +1,36 @@
+.dashboard-wrapper {
+    padding: 20px;
+}
+
+.dashboard-card {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.dashboard-card .card-title {
+    font-family: 'Archivo', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.dashboard-card .card-text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.dashboard-card .btn-primary {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: var(--first-color);
+    border-color: var(--first-color);
+    padding: 10px 20px;
+    border-radius: .3rem;
+}
+
+.dashboard-card .btn-primary:hover {
+    background-color: var(--second-color);
+    border-color: var(--second-color);
+}

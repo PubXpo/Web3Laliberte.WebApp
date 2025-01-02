@@ -1,0 +1,163 @@
+.inbox-wrapper {
+    padding: 20px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.messages-wrapper {
+    background-color: var(--third-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--fourth-color);
+    
+}
+
+.message-details-card {
+    background-color: var(--fourth-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.message-details-card h5 {
+    font-family: 'Archivo', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    background: none;
+}
+
+.message-details-card p, .message-details-card h6 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.message-details-card hr {
+    margin: 20px 0;
+}
+
+
+.message-content {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 16px;
+    background-color:var(--fourth-color);
+    margin-bottom: 10px;
+    
+}
+
+.card-text {
+    padding: 10px;
+}
+
+.signature {
+    margin-top: 20px;
+    font-style: italic;
+    color: #555;
+}
+
+.no-message-selected {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    color: gray;
+}
+
+
+.inbox-wrapper button.btn-primary, .inbox-wrapper button.btn-success, .inbox-wrapper button.btn-danger {
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    border-radius: .3rem;
+    color: var(--fourth-color);
+}
+
+
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--fourth-color);
+
+}
+
+.modal-header, .modal-footer {
+    border: none;
+    padding: 20px;
+    background-color: var(--third-color);
+    border-radius: 10px 10px 0 0;
+    color: var(--fourth-color);
+}
+
+.modal-header .modal-title {
+    font-family: 'Archivo', sans-serif;
+    font-size: 24px;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-body .row {
+    margin-bottom: 20px;
+}
+
+.modal-body .form-group {
+    margin-bottom: 20px;
+    color: var(--fifth-color);
+
+}
+
+.label.form-label {
+    color: var(--fifth-color);
+}
+
+.modal-body .form-control {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: var(--fifth-color);
+}
+
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 0 0 10px 10px;
+}
+
+.modal-footer .btn {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    border-radius: .3rem;
+    color: var(--fourth-color);
+}
+
+.modal-footer .btn:hover {
+    background-color: var(--second-color);
+    border-color:var(--second-color);
+}
+
+
+
+@media (max-width: 768px) {
+    
+    .messages-wrapper {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+}
+
+
+
+

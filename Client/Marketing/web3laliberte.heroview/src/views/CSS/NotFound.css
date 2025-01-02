@@ -1,0 +1,41 @@
+.notfound-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--fourth-color);
+}
+
+.notfound-content {
+    text-align: center;
+    color: #343a40;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.notfound-icon {
+    font-size: 100px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.notfound-content h1 {
+    font-size: 120px;
+    font-family: 'Archivo', sans-serif;
+    margin-bottom: 20px;
+}
+
+.notfound-content p {
+    font-size: 24px;
+    font-family: 'Manrope', sans-serif;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
