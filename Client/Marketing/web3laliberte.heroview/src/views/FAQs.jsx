@@ -2,6 +2,7 @@ import React, {useEffect, useState,} from 'react';
 import {Accordion, Container, FormControl, InputGroup, OverlayTrigger, Tooltip} from 'react-bootstrap';
 import {Helmet, HelmetProvider} from "react-helmet-async";
 import './CSS/FAQs.css';
+import axios from "axios";
 
 function FAQs() {
 
@@ -9,24 +10,22 @@ function FAQs() {
     const [activeFaq, setActiveFaq] = useState(null);
     const [faqs, setFaqs] = useState([]);
     const [loading, setLoading] = useState(true);
-
+    const BASE_API_URL = process.env.REACT_APP_API_URL;
+    const FAQ_API_URL = `${BASE_API_URL}/faq`;
 
     useEffect(() => {
         const fetchFaqs = async () => {
             try {
-                const response = await fetch("http://localhost:4001/api/FAQ");
-                const data = await response.json();
-                setFaqs(data);
-                setLoading(false);
+                const response = await axios.get(FAQ_API_URL);
+                setFaqs(response.data);
             } catch (error) {
                 console.error("Error fetching FAQs:", error);
-                setLoading(false);
             }
         };
 
         fetchFaqs().then(r => console.log("FAQs fetched successfully!"));
 
-        const interval = setInterval(fetchFaqs, 60000); // Update FAQs every 60 seconds
+        const interval = setInterval(fetchFaqs, 3600000); // Update FAQs every hour
         return () => clearInterval(interval);
     }, []);
 
@@ -59,7 +58,7 @@ function FAQs() {
                     <InputGroup.Text>🔍</InputGroup.Text>
                     <FormControl
                         type="text"
-                        placeholder="Search FAQs"
+                        placeholder="Find Other FAQs"
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                     />

@@ -6,7 +6,7 @@ using Web3Laliberte.OperationsAPI.Model;
 
 namespace Web3Laliberte.OperationsAPI.Controller;
 
-[Route("v1/admin")]
+[Route("api/v1/admin")]
 [ApiController]
 public class AdminAuthController : ControllerBase
 {
@@ -20,6 +20,10 @@ public class AdminAuthController : ControllerBase
         _logger.LogInformation("AdminPassword from environment: {AdminPassword}", _adminPassword);
     }
 
+    /// <summary>
+    ///     Login endpoint for admin users
+    /// </summary>
+    /// <param name="request"></param>
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] AdminAuth request)
     {

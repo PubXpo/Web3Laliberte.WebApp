@@ -1,6 +1,6 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { useState } from "react";
+import React, { useState } from "react";
 import { GrClose } from "react-icons/gr";
 import { FaAlignRight, FaHandsHelping } from "react-icons/fa";
 import "./CSS/NavTop.css";
@@ -69,41 +69,43 @@ function NavTop() {
             <Container fluid className="px-4">
                 <Navbar.Brand className="navtop-brand">
                     <Link to="/admin">
-                        <FaHandsHelping className="navtop-icon" />
+                        <FaHandsHelping className="navtop-icon"/>
                         Web3 Laliberté
                     </Link>
                 </Navbar.Brand>
+                <small>(Admin)</small>
                 <button className="toggle-menu" onClick={toggleOpen}>
-                    <FaAlignRight />
+                    <FaAlignRight/>
                 </button>
                 <Nav className="navtop-list ms-auto">
                     <Nav.Link className="pe-3">
-                        <NavLink to="/admin" className={({ isActive }) => (isActive ? "active" : "")}>
+                        <NavLink to="/admin" className={({isActive}) => (isActive ? "active" : "")}>
                             Dashboard
                         </NavLink>
                     </Nav.Link>
                     <Nav.Link className="pe-3">
-                        <NavLink to="/inbox" className={({ isActive }) => (isActive ? "active" : "")}>
+                        <NavLink to="/inbox" className={({isActive}) => (isActive ? "active" : "")}>
                             Inbox
                         </NavLink>
                     </Nav.Link>
                     <Nav.Link className="pe-3">
-                        <NavLink to="/orders" className={({ isActive }) => (isActive ? "active" : "")}>
+                        <NavLink to="/orders" className={({isActive}) => (isActive ? "active" : "")}>
                             Orders
                         </NavLink>
                     </Nav.Link>
                     <Nav.Link className="pe-3">
-                        <NavLink to="/transaction-history" className={({ isActive }) => (isActive ? "active" : "")}>
+                        <NavLink to="/transaction-history" className={({isActive}) => (isActive ? "active" : "")}>
                             Transaction History
                         </NavLink>
                     </Nav.Link>
                     <Nav.Link className="pe-3">
-                        <NavLink to="/content-management" className={({ isActive }) => (isActive ? "active" : "")}>
+                        <NavLink to="/content-management" className={({isActive}) => (isActive ? "active" : "")}>
                             Content Management
                         </NavLink>
                     </Nav.Link>
                     <Nav.Link className="pe-3">
-                        <NavLink to="/login" onClick={handleLogout} className={({ isActive }) => (isActive ? "active" : "")}>
+                        <NavLink to="/login" onClick={handleLogout}
+                                 className={({isActive}) => (isActive ? "active" : "")}>
                             Logout
                         </NavLink>
                     </Nav.Link>

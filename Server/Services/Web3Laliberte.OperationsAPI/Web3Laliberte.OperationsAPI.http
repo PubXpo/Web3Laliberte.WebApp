@@ -1,6 +1,0 @@
-@Web3Laliberte.OperationsAPI_HostAddress = http://localhost:5152
-
-GET {{Web3Laliberte.OperationsAPI_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

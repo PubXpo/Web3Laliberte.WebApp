@@ -19,7 +19,7 @@ const Orders = () => {
     const [processingMessage, setProcessingMessage] = useState("");
     const [newOrderCount, setNewOrderCount] = useState(0);
     const BASE_API_URL = process.env.REACT_APP_API_URL;
-    const TRANSACTION_API_URL = `${BASE_API_URL}/api/transaction`;
+    const TRANSACTION_API_URL = `${BASE_API_URL}/transaction`;
 
     useEffect(() => {
         const fetchOrdersAndGifts = async () => {

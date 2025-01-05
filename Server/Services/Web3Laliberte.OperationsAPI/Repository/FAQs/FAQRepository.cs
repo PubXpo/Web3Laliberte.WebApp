@@ -1,4 +1,3 @@
-// Repositories/FAQRepository.cs
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;

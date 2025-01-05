@@ -1,0 +1,48 @@
+volumes:
+  web3lapp-prod-data:
+    driver: local
+
+networks:
+  Web3LApp-Net:
+    external: false
+    
+services:
+  
+  # SERVICE 01: Web3LApp-OperationsAPI
+  web3lapp-operations:
+    image: ghcr.io/leeberte/web3lapp-operations-api:latest 
+    container_name: Web3LApp-Operations-API
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://*:4000
+      DB_HOST: web3lapp-prod-db
+    env_file:
+      - .env.prod
+    ports:
+      - "4000:4000"
+    networks:
+      - Web3LApp-Net
+
+  # SERVICE 02: Web3LApp-MarketingFrontend, ReactJS
+  web3lapp-marketing:
+    image: ghcr.io/leeberte/web3lapp-marketing-app:latest 
+    container_name: Web3LApp-Marketing-App
+    env_file:
+      - .env.prod
+    ports:
+      - "4010:4010"
+    networks:
+      - Web3LApp-Net
+    restart: always
+
+  # SERVICE 03: Web3LApp-AdminPortal, ReactJS
+  web3lapp-admin:
+    image: ghcr.io/leeberte/web3lapp-admin-app:latest  
+    container_name: Web3LApp-Admin-App
+    env_file:
+      - .env.prod
+    ports:
+      - "4020:4020"
+    networks:
+      - Web3LApp-Net
+    restart: always

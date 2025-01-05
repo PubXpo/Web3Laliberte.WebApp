@@ -7,7 +7,7 @@ using Web3Laliberte.OperationsAPI.ViewModels;
 namespace Web3Laliberte.OperationsAPI.Controller
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class FAQController : ControllerBase
     {
         private readonly IFAQService _service;
@@ -17,14 +17,25 @@ namespace Web3Laliberte.OperationsAPI.Controller
             _service = service;
         }
 
+        /// <summary>
+        ///     Returns all FAQs.
+        /// </summary>
         [HttpGet]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
         public async Task<IActionResult> GetAll()
         {
             var faqs = await _service.GetAllAsync();
             return Ok(faqs);
         }
 
+        /// <summary>
+        ///     Returns a FAQ by ID.
+        /// </summary>
+        /// <param name="id">The ID of the FAQ.</param>
         [HttpGet("{id}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
         public async Task<IActionResult> GetById(int id)
         {
             var faq = await _service.GetByIdAsync(id);
@@ -35,7 +46,13 @@ namespace Web3Laliberte.OperationsAPI.Controller
             return Ok(faq);
         }
 
+        /// <summary>
+        ///     Creates a new FAQ.
+        /// </summary>
+        /// <param name="faq">The FAQ view model.</param>
         [HttpPost]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
         public async Task<IActionResult> Create([FromBody] FAQViewModel faq)
         {
             if (!ModelState.IsValid)
@@ -53,7 +70,14 @@ namespace Web3Laliberte.OperationsAPI.Controller
             return CreatedAtAction(nameof(GetById), new { id = faqModel.Id }, faqModel);
         }
 
+        /// <summary>
+        ///     Updates a FAQ by ID.
+        /// </summary>
+        /// <param name="id">The ID of the FAQ.</param>
+        /// <param name="faq">The FAQ view model.</param>
         [HttpPut("{id}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
         public async Task<IActionResult> Update(int id, [FromBody] FAQViewModel faq)
         {
             if (id != faq.Id)
@@ -77,7 +101,13 @@ namespace Web3Laliberte.OperationsAPI.Controller
             return NoContent();
         }
 
+        /// <summary>
+        ///     Deletes a FAQ by ID.
+        /// </summary>
+        /// <param name="id">The ID of the FAQ.</param>
         [HttpDelete("{id}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
         public async Task<IActionResult> Delete(int id)
         {
             var faq = await _service.GetByIdAsync(id);

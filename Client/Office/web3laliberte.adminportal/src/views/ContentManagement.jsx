@@ -14,10 +14,10 @@ const ContentManagement = () => {
     const [showFaqModal, setShowFaqModal] = useState(false);
     const [faqForm, setFaqForm] = useState({ question: "", answer: "" });
     const BASE_API_URL = process.env.REACT_APP_API_URL;
-    const FAQ_API_URL = `${BASE_API_URL}/api/faq`;
+    const FAQ_API_URL = `${BASE_API_URL}/faq`;
 
     useEffect(() => {
-        fetchFaqs();
+        fetchFaqs().then(r => console.log("FAQs fetched successfully!"));
     }, []);
 
     const fetchFaqs = async () => {
@@ -41,7 +41,7 @@ const ContentManagement = () => {
             } else {
                 await axios.post(`${FAQ_API_URL}`, faqForm);
             }
-            fetchFaqs();
+            await fetchFaqs();
             setShowFaqModal(false);
             toast.success("FAQ saved successfully!");
         } catch (error) {
@@ -52,7 +52,7 @@ const ContentManagement = () => {
     const handleDeleteFaq = async (faqId) => {
         try {
             await axios.delete(`${FAQ_API_URL}/${faqId}`);
-            fetchFaqs();
+            await fetchFaqs();
             toast.success("FAQ deleted successfully!");
         } catch (error) {
             console.error("Error deleting FAQ:", error);

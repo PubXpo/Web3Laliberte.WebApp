@@ -11,7 +11,7 @@ const TransactionHistory = () => {
     const [transactions, setTransactions] = useState([]);
     const [selectedTransaction, setSelectedTransaction] = useState(null);
     const BASE_API_URL = process.env.REACT_APP_API_URL;
-    const TRANSACTION_API_URL = `${BASE_API_URL}/api/transaction`;
+    const TRANSACTION_API_URL = `${BASE_API_URL}/transaction`;
 
     useEffect(() => {
         const fetchTransactions = async () => {

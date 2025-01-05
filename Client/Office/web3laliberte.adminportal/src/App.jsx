@@ -28,6 +28,7 @@ function App() {
                 <h1>
                     <strong>Web3 Laliberté</strong>
                 </h1>
+                <small>Admin Portal</small>
                 <p>─────</p>
                 <Spinner animation="grow"/>
             </div>
@@ -36,7 +37,7 @@ function App() {
 
     return (
         <>
-            <NavTop/>
+        <NavTop/>
             <div className="d-flex">
                 <Routes>
                     <Route path="/login" element={<AdminLogin/>}></Route>

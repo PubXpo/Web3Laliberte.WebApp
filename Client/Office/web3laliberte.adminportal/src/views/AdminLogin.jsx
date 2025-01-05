@@ -10,7 +10,7 @@ const AdminLogin = () => {
     const [error, setError] = useState(null);
     const navigate = useNavigate();
     const BASE_API_URL = process.env.REACT_APP_API_URL;
-    const ADMIN_API_URL = `${BASE_API_URL}/v1/admin/login`;
+    const ADMIN_API_URL = `${BASE_API_URL}/admin/login`;
 
     const handleSubmit = async (e) => {
         e.preventDefault();

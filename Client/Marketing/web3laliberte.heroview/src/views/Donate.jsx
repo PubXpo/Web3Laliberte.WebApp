@@ -13,7 +13,7 @@ const Donate = () => {
     const [showModal, setShowModal] = useState(false);
     
     const BASE_API_URL = process.env.REACT_APP_API_URL;
-    const TRANSACTION_API_URL = `${BASE_API_URL}/api/transaction`;
+    const TRANSACTION_API_URL = `${BASE_API_URL}/transaction`;
 
     const handlePaymentMethodChange = (e) => {
         setPaymentMethod(e.target.value);

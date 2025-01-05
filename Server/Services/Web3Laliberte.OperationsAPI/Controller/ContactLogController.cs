@@ -8,7 +8,7 @@ using Web3Laliberte.OperationsAPI.ViewModel.ContactLog;
 namespace Web3Laliberte.OperationsAPI.Controller
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class ContactLogController : ControllerBase
     {
         private readonly IContactLogService _service;
@@ -18,7 +18,13 @@ namespace Web3Laliberte.OperationsAPI.Controller
             _service = service;
         }
 
+        /// <summary>
+        ///     Creates a new contact log
+        /// </summary>
+        /// <param name="viewModel"></param>
         [HttpPost]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
         public async Task<IActionResult> CreateContactLog([FromBody] ContactLogViewModel viewModel)
         {
             if (!ModelState.IsValid)
@@ -37,7 +43,14 @@ namespace Web3Laliberte.OperationsAPI.Controller
             }
         }
 
+        /// <summary>
+        ///     Returns a contact log by ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns> The contact log with the specified ID </returns>
         [HttpGet("{id}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
         public async Task<IActionResult> GetContactLogById([FromRoute] Guid id)
         {
             if (!ModelState.IsValid)
@@ -56,7 +69,12 @@ namespace Web3Laliberte.OperationsAPI.Controller
             }
         }
 
+        /// <summary>
+        ///     Updates a contact log by ID
+        /// </summary>
         [HttpPut("{id}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
         public async Task<IActionResult> UpdateContactLog([FromRoute] Guid id, [FromBody] ContactLogViewModel viewModel)
         {
             if (!ModelState.IsValid)
@@ -76,7 +94,12 @@ namespace Web3Laliberte.OperationsAPI.Controller
             }
         }
 
+        /// <summary>
+        ///     Deletes a contact log by ID
+        /// </summary>
         [HttpDelete("{id}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
         public async Task<IActionResult> DeleteContactLog([FromRoute] Guid id)
         {
             if (!ModelState.IsValid)
@@ -95,7 +118,12 @@ namespace Web3Laliberte.OperationsAPI.Controller
             }
         }
 
+        /// <summary>
+        ///     Returns all contact logs in the database
+        /// </summary>
         [HttpGet]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
         public async Task<IActionResult> GetAllContactLogs()
         {
             if (!ModelState.IsValid)

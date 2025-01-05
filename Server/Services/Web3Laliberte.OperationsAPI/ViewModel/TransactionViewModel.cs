@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Web3Laliberte.OperationsAPI.Model.Orders;
 
 namespace Web3Laliberte.OperationsAPI.ViewModel.Orders
 {

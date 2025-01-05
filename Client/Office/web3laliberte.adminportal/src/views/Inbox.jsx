@@ -15,7 +15,7 @@ function Inbox() {
     const [replyContent, setReplyContent] = useState("\n\n\nThank you,\nFrom the Web3 Laliberté Team");
     const [newMessageCount, setNewMessageCount] = useState(0);
     const BASE_API_URL = process.env.REACT_APP_API_URL;
-    const CONTACTLOG_API_URL = `${BASE_API_URL}/api/contactlog`;
+    const CONTACTLOG_API_URL = `${BASE_API_URL}/contactlog`;
 
     useEffect(() => {
         const fetchMessages = async () => {
@@ -26,11 +26,12 @@ function Inbox() {
             } catch (error) {
                 console.error("Error fetching messages:", error);
             }
-        };
+        }
 
         fetchMessages().then(r => console.log("Messages fetched successfully!"));
      
-        const ws = new WebSocket("ws://localhost:4000/ws"); // Add a WebSocket connection to the service to limit the number of requests made to the server
+        const ws = new WebSocket('ws://localhost:4000/ws');
+         // Add a WebSocket connection to the service to limit the number of requests made to the server
 
         ws.onmessage = (event) => {
             const newMessage = JSON.parse(event.data);

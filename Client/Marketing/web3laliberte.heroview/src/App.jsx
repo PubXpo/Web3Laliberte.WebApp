@@ -1,6 +1,4 @@
 import {Route, Routes} from "react-router-dom";
-import {useState} from "react";
-import {Spinner} from "react-bootstrap";
 import NavTop from "./components/layout/NavTop";
 import NavBot from "./components/layout/NavBot";
 import Footer from "./components/layout/Footer";
@@ -13,24 +11,6 @@ import NotFound from "./views/NotFound";
 import "./index";
 
 function App() {
-    const [preload, setPreload] = useState(true);
-
-    setTimeout(function () {
-        setPreload(false);
-    }, 2000);
-
-    if (preload) {
-        return (
-            <div className="preload">
-                <h1>
-                    <strong>Web3 Laliberté</strong>
-                </h1>
-                <p>─────</p>
-                <Spinner animation="grow"/>
-            </div>
-        );
-    }
-
     return (
         <>
             <NavTop/>
