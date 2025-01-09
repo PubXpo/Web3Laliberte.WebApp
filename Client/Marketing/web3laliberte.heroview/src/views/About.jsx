@@ -18,10 +18,10 @@ function About() {
                 </div>
                 <div className="about-right animate__animated animate__fadeIn animate__slower py-3">
                     <p>
-                        We are a nonprofit organization dedicated to advocating for privacy, freedom, and security in the decentralized world of Web3 technologies. As blockchain and digital currencies evolve, we focus on ensuring that users’ digital rights are safeguarded, fostering an open and equitable digital future.
+                        We are a nonprofit organisation dedicated to advocating for privacy, freedom, and security in the decentralised world of Web3 technologies. As blockchain and digital currencies evolve, we focus on ensuring that users’ digital rights are safeguarded, fostering an open and equitable digital future.
                     </p>
                     <p>
-                        Our team works at the intersection of technology, policy, and advocacy to protect digital freedom. We promote privacy-enhancing technologies, support regulatory reforms that protect users, and educate communities on safe digital practices. We envision a world where decentralization leads to greater transparency and personal autonomy.
+                        Our team works at the intersection of technology, policy, and advocacy to protect digital freedom. We promote privacy-enhancing technologies, support regulatory reforms that protect users, and educate communities on safe digital practices. We envision a world where decentralisation leads to greater transparency and personal autonomy.
                     </p>
                     <p>
                         Our core efforts include:
@@ -33,7 +33,7 @@ function About() {
                         <li>Advocating for policies that ensure an open and equitable digital future.</li>
                     </ul>
                     <p>
-                        Join us in advocating for a Web3 ecosystem that prioritizes rights, freedoms, and privacy for everyone. Together, we can create a decentralized internet that serves the people and protects their digital freedoms.
+                        Join us in advocating for a Web3 ecosystem that prioritises rights, freedoms, and privacy for everyone. Together, we can create a decentralised internet that serves the people and protects their digital freedoms.
                     </p>
                 </div>
             </Container>

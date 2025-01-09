@@ -142,11 +142,6 @@ function Inbox() {
                                     </Card.Text>
                                     <Card.Text className="message-content">
                                         {selectedMessage.message}
-                                        <div className="signature">
-                                            <br/><br/>
-                                            Best regards<br/> <br/>
-                                            
-                                        </div>
                                     </Card.Text>
                                     <Button variant="success" onClick={() => setShowModal(true)}>
                                         Reply

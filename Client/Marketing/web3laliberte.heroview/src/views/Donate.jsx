@@ -141,19 +141,33 @@ const Donate = () => {
                     <title>Donate | Web3 Laliberté</title>
                 </Helmet>
             </HelmetProvider>
+            <div className="landscape-warning">
+                <div className="phone">
+                </div>
+                <div className="message">
+                    Please rotate your device!
+                </div>
+            </div>
             <Container fluid className="donate-wrapper">
                 <div className="donate-left animate__animated animate__pulse">
                     <h3>Make a Donation</h3>
                     <h4>───&nbsp;&nbsp;Page <strong>03</strong></h4>
                 </div>
+
                 <div className="donate-right">
                     <div className="tab-navigation">
-                        <button onClick={() => setCurrentTab("amount")} className={currentTab === "amount" ? "active-tab" : ""}>Amount</button>
-                        <button onClick={() => setCurrentTab("billing")} className={currentTab === "billing" ? "active-tab" : ""}>Billing Details</button>
-                        <button disabled={true} onClick={() => setCurrentTab("checkout")} className={currentTab === "checkout" ? "active-tab" : ""}>Checkout</button>
+                        <button onClick={() => setCurrentTab("amount")}
+                                className={currentTab === "amount" ? "active-tab" : ""}>Amount
+                        </button>
+                        <button onClick={() => setCurrentTab("billing")}
+                                className={currentTab === "billing" ? "active-tab" : ""}>Billing Details
+                        </button>
+                        <button disabled={true} onClick={() => setCurrentTab("checkout")}
+                                className={currentTab === "checkout" ? "active-tab" : ""}>Checkout
+                        </button>
                     </div>
                     <div className="store-wrapper">
-                        <h5><AiFillLock /> Secure form </h5>
+                        <h5><AiFillLock/> Secure form </h5>
                         {currentTab === "amount" && (
                             <div className="form-step">
                                 <div className="amount-buttons">
@@ -178,20 +192,25 @@ const Donate = () => {
 
                                 <div className="donation-thank-you">
                                     <h3>Thank You for Your Generosity!</h3>
-                                    <p>Every contribution goes a long way in supporting meaningful projects. As a token of our gratitude, each donation tier comes with a special gift:</p>
+                                    <p>Every contribution goes a long way in supporting meaningful projects. As a token
+                                        of our gratitude, each donation tier comes with a special gift:</p>
 
                                     <ul className="donation-tiers">
                                         <li>
                                             <strong>Band 1: £1 - £20</strong>
-                                            <p>Receive a beautiful pin and our exclusive Welcome Magazine, packed with stories and insights from our projects.</p>
+                                            <p>Receive a beautiful pin and our exclusive Welcome Magazine, packed with
+                                                stories and insights from our projects.</p>
                                         </li>
                                         <li>
                                             <strong>Band 2: £21 - £50</strong>
-                                            <p>In addition to Band 1 gifts, enjoy a limited-edition tote bag to showcase your support wherever you go!</p>
+                                            <p>In addition to Band 1 gifts, enjoy a limited-edition tote bag to showcase
+                                                your support wherever you go!</p>
                                         </li>
                                         <li>
                                             <strong>Band 3: £100+</strong>
-                                            <p>All the rewards of Band 2, plus an invitation to a behind-the-scenes virtual tour of one of our key project sites and a thank-you certificate for your impactful contribution.</p>
+                                            <p>All the rewards of Band 2, plus an invitation to a behind-the-scenes
+                                                virtual tour of one of our key project sites and a thank-you certificate
+                                                for your impactful contribution.</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -202,7 +221,8 @@ const Donate = () => {
                                 <div className="billing-details">
                                     <h2 hidden>Billing Details</h2>
                                     <label htmlFor="title">Title:</label>
-                                    <select id="title" name="title" onChange={handleBillingDetails} value={cart.billingDetails.title} required>
+                                    <select id="title" name="title" onChange={handleBillingDetails}
+                                            value={cart.billingDetails.title} required>
                                         <option value="">Select Title</option>
                                         <option value="Mr">Mr</option>
                                         <option value="Mrs">Mrs</option>
@@ -213,27 +233,36 @@ const Donate = () => {
                                     </select>
 
                                     <label htmlFor="firstName">First Name:</label>
-                                    <input type="text" id="firstName" name="firstName" onChange={handleBillingDetails} value={cart.billingDetails.firstName} required />
+                                    <input type="text" id="firstName" name="firstName" onChange={handleBillingDetails}
+                                           value={cart.billingDetails.firstName} required/>
 
                                     <label htmlFor="surname">Surname:</label>
-                                    <input type="text" id="surname" name="surname" onChange={handleBillingDetails} value={cart.billingDetails.surname} required />
+                                    <input type="text" id="surname" name="surname" onChange={handleBillingDetails}
+                                           value={cart.billingDetails.surname} required/>
 
                                     <label htmlFor="email">Email Address:</label>
-                                    <input type="email" id="email" name="email" onChange={handleBillingDetails} value={cart.billingDetails.email} required />
+                                    <input type="email" id="email" name="email" onChange={handleBillingDetails}
+                                           value={cart.billingDetails.email} required/>
 
                                     <label htmlFor="postcode">Postcode:</label>
-                                    <input type="text" id="postcode" name="postcode" onChange={handleBillingDetails} value={cart.billingDetails.postcode} required />
+                                    <input type="text" id="postcode" name="postcode" onChange={handleBillingDetails}
+                                           value={cart.billingDetails.postcode} required/>
 
                                     <label htmlFor="addressLine1">Address Line 1:</label>
-                                    <input type="text" id="addressLine1" name="addressLine1" onChange={handleBillingDetails} value={cart.billingDetails.addressLine1} required />
+                                    <input type="text" id="addressLine1" name="addressLine1"
+                                           onChange={handleBillingDetails} value={cart.billingDetails.addressLine1}
+                                           required/>
 
                                     <label htmlFor="addressLine2">Address Line 2:</label>
-                                    <input type="text" id="addressLine2" name="addressLine2" onChange={handleBillingDetails} value={cart.billingDetails.addressLine2} />
+                                    <input type="text" id="addressLine2" name="addressLine2"
+                                           onChange={handleBillingDetails} value={cart.billingDetails.addressLine2}/>
 
                                     <label htmlFor="city">City/Town:</label>
-                                    <input type="text" id="city" name="city" onChange={handleBillingDetails} value={cart.billingDetails.city} required />
+                                    <input type="text" id="city" name="city" onChange={handleBillingDetails}
+                                           value={cart.billingDetails.city} required/>
 
-                                    <p>I would like to receive email updates about how I can take further action on Web3 Laliberté campaigns and how I can support your work:</p>
+                                    <p>I would like to receive email updates about how I can take further action on Web3
+                                        Laliberté campaigns and how I can support your work:</p>
                                     <div className="checkbox-group">
                                         <input
                                             type="checkbox"
@@ -278,22 +307,22 @@ const Donate = () => {
                                     <h3>Your Cart</h3>
                                     <table>
                                         <thead>
-                                            <tr>
-                                                <th>Item</th>
-                                                <th>Quantity</th>
-                                                <th>Price per Unit</th>
-                                                <th>Total Price</th>
-                                            </tr>
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Quantity</th>
+                                            <th>Price per Unit</th>
+                                            <th>Total Price</th>
+                                        </tr>
                                         </thead>
                                         <tbody>
-                                            {cart.items.map((item, index) => (
-                                                <tr key={index}>
-                                                    <td className="item-name">{item.name}</td>
-                                                    <td>{item.quantity}</td>
-                                                    <td>£{item.pricePerUnit.toFixed(2)}</td>
-                                                    <td>£{(item.quantity * item.pricePerUnit).toFixed(2)}</td>
-                                                </tr>
-                                            ))}
+                                        {cart.items.map((item, index) => (
+                                            <tr key={index}>
+                                                <td className="item-name">{item.name}</td>
+                                                <td>{item.quantity}</td>
+                                                <td>£{item.pricePerUnit.toFixed(2)}</td>
+                                                <td>£{(item.quantity * item.pricePerUnit).toFixed(2)}</td>
+                                            </tr>
+                                        ))}
                                         </tbody>
                                     </table>
                                     <div className="checkout-sum">
@@ -312,11 +341,13 @@ const Donate = () => {
                                 <div className="payment-options">
                                     <h3>Payment Options</h3>
                                     <div className="payment-method">
-                                        <input type="radio" id="creditCard" name="paymentMethod" value="creditCard" onChange={handlePaymentMethodChange} required />
+                                        <input type="radio" id="creditCard" name="paymentMethod" value="creditCard"
+                                               onChange={handlePaymentMethodChange} required/>
                                         <label htmlFor="creditCard">Credit Card</label>
                                     </div>
                                     <div className="payment-method">
-                                        <input type="radio" id="paypal" name="paymentMethod" value="paypal" onChange={handlePaymentMethodChange} required />
+                                        <input type="radio" id="paypal" name="paymentMethod" value="paypal"
+                                               onChange={handlePaymentMethodChange} required/>
                                         <label htmlFor="paypal">PayPal</label>
                                     </div>
                                 </div>
@@ -371,7 +402,7 @@ const Donate = () => {
                     </div>
                 </div>
             </Container>
-            <PaymentModal show={showModal} handleClose={() => setShowModal(false)} handlePayment={handleSubmit} />
+            <PaymentModal show={showModal} handleClose={() => setShowModal(false)} handlePayment={handleSubmit}/>
         </>
     );
 };

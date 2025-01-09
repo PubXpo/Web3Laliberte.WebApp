@@ -24,7 +24,7 @@ function NavTop() {
         navigate('/login');
     };
 
-    const validPaths = ['/admin', '/inbox', '/orders', '/transaction-history', '/content-management'];
+    const validPaths = ['/', '/admin', '/inbox', '/orders', '/transaction-history', '/content-management'];
     if (validPaths.indexOf(location.pathname) === -1) {
         return null;
     }
@@ -72,8 +72,9 @@ function NavTop() {
                         <FaHandsHelping className="navtop-icon"/>
                         Web3 Laliberté
                     </Link>
+                    <h6 style={{marginLeft: '8px'}}> (Admin)</h6>
                 </Navbar.Brand>
-                <small>(Admin)</small>
+
                 <button className="toggle-menu" onClick={toggleOpen}>
                     <FaAlignRight/>
                 </button>

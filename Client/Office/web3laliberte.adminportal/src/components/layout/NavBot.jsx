@@ -10,7 +10,11 @@ function NavBot() {
     const {pathname} = useLocation();
 
     switch (pathname) {
-        case "/admin":
+        case "/":
+            numberPage = "01";
+            titlePage = "Dashboard";
+            break;
+        case  "/admin":
             numberPage = "01";
             titlePage = "Dashboard";
             break;
@@ -26,7 +30,7 @@ function NavBot() {
             numberPage = "04";
             titlePage = "Transaction History";
             break;
-        case "content-management":
+        case "/content-management":
             numberPage = "05";
             titlePage = "Content Management";
             break;
@@ -35,11 +39,14 @@ function NavBot() {
 
     // Direct Up
     switch (pathname) {
+        case "/":
+            directUp = "/content-management";
+            break;
         case "/admin":
             directUp = "/content-management";
             break;
         case "/inbox":
-            directUp = "/";
+            directUp = "/admin";
             break;
         case "/orders":
             directUp = "/inbox";
@@ -55,6 +62,9 @@ function NavBot() {
 
     // Direct Down
     switch (pathname) {
+        case "/":
+            directDown = "/inbox";
+            break;
         case "/admin":
             directDown = "/inbox";
             break;
@@ -72,7 +82,7 @@ function NavBot() {
             break;
         default:
     }
-    const validPaths = ['/admin', '/inbox', '/orders', '/transaction-history', '/content-management'];
+    const validPaths = ['/', '/admin', '/inbox', '/orders', '/transaction-history', '/content-management'];
     if (validPaths.indexOf(pathname) === -1) {
         return null;
     }

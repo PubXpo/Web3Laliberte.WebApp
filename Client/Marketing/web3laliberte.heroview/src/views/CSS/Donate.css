@@ -437,6 +437,45 @@
     transition: opacity 300ms;
 }
 
+.landscape-warning {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    padding: 50px;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    text-align: center;
+    font-size: 20px;
+    transform: translateX(-50%);
+}
+
+.phone {
+    height: 50px;
+    width: 100px;
+    border: 3px solid;
+    border-radius: 10px;
+    animation: rotate 1.5s ease-in-out infinite alternate;
+    display: none;
+}
+
+.message {
+    font-size: 1em;
+    margin-top: 40px;
+    display: none;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-90deg);
+    }
+    100% {
+        transform: rotate(-90deg);
+    }
+}
 
 @media (max-width: 1400px) {
     .donate-wrapper {
@@ -491,27 +530,63 @@
 
 
 @media (max-width: 768px) {
-    .donate-left {
-        margin-bottom: 10px;
+    .donate-wrapper {
+        flex-direction: column;
+        padding: 10px;
     }
 
-
-    .donate-right, .store-wrapper {
+    .donate-left {
         width: 100%;
         margin-bottom: 20px;
     }
 
-    .donate-container {
-        height: 450px !important;
-        overflow-y: scroll;
-        overflow-x: hidden;
+    .donate-right {
+        width: 100%;
+        padding: 10px;
     }
 
-    .amount-buttons, .amount-input {
-        flex-wrap: wrap;
-        margin-left: 0;
-
-
+    .tab-navigation button {
+        font-size: 12px;
+        padding: 10px;
     }
 
+    .store-wrapper {
+        padding: 10px;
+    }
+
+    .amount-button {
+        width: 80px;
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .amount-input {
+        width: 80px;
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .billing-details input,
+    .billing-details select {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .submit-button,
+    .next-button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .donate-wrapper {
+        display: none;
+    }
+
+    .phone, .message {
+        display: block;
+    }
+
+  
 }

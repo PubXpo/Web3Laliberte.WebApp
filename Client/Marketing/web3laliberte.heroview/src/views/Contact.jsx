@@ -122,7 +122,6 @@ function Contact() {
                                                 <option value="General Enquiries">General enquiries</option>
                                                 <option value="My Donations">My donations</option>
                                                 <option value="My Data">My data</option>
-                                                <option value="Will">Remembering Web3 Laliberte in my will</option>
                                                 <option value="Legal Information">Legal information and outreach</option>
                                                 <option value="Speaker Request">Speaker request</option>
                                             </Form.Control>

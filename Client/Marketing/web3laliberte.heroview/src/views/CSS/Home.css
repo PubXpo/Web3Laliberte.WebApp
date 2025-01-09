@@ -98,13 +98,60 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
+    .home-wrapper {
+        padding: 10px;
+    }
+
+    .hero-section, .impact-section, .mission-section, .donate-section {
+        padding: 100px 0;
+    }
+
+    .hero-content, .mission-content, .impact-content, .donate-content {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
     .hero-content h2 {
         font-size: 30px;
         line-height: 40px;
     }
 
     .hero-content p {
+        font-size: 16px;
+    }
+
+    .btn-connect {
+        width: 150px;
+        padding: 10px 6px;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-wrapper {
+        padding: 5px;
+    }
+
+    .hero-section, .impact-section, .mission-section, .donate-section {
+        padding: 50px 0;
+    }
+
+    .hero-content, .mission-content, .impact-content, .donate-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero-content h2 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .hero-content p {
         font-size: 14px;
+    }
+
+    .btn-connect {
+        width: 120px;
+        padding: 8px 4px;
     }
 }

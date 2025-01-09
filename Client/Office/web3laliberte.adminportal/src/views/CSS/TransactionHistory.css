@@ -62,10 +62,65 @@ button.btn-primary:hover, button.btn-success:hover, button.btn-warning:hover, bu
 
 
 @media (max-width: 768px) {
-
-    .transactions-list-wrapper {
-        padding: 20px;
-        margin-bottom: 20px;
+    .transaction-history-wrapper {
+        padding: 15px;
     }
 
+    .transactions-list-wrapper {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .transaction-details-card {
+        padding: 15px;
+    }
+
+    .transaction-details-card h5 {
+        font-size: 20px;
+    }
+
+    .transaction-details-card p, .transaction-details-card h6 {
+        font-size: 14px;
+    }
+
+    button.btn-primary,
+    button.btn-success,
+    button.btn-warning,
+    button.btn-danger {
+        font-size: 12px;
+        padding: 8px 16px;
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .transaction-history-wrapper {
+        padding: 10px;
+    }
+
+    .transactions-list-wrapper {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .transaction-details-card {
+        padding: 10px;
+    }
+
+    .transaction-details-card h5 {
+        font-size: 18px;
+    }
+
+    .transaction-details-card p, .transaction-details-card h6 {
+        font-size: 12px;
+    }
+
+    button.btn-primary,
+    button.btn-success,
+    button.btn-warning,
+    button.btn-danger {
+        font-size: 10px;
+        padding: 6px 12px;
+        margin-right: 3px;
+    }
 }

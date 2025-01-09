@@ -89,12 +89,10 @@ i#normal {
 .menu-list a.active {
     color: var(--first-color) !important;
     font-style: italic;
-    text-decoration: line-through;
     border-bottom: none;
 }
 
 .menu-list a:hover {
-    text-decoration: line-through;
     font-style: italic;
     color: var(--second-color);
 }
@@ -110,5 +108,51 @@ i#normal {
 
     .menu {
         display: flex;
+    }
+    
+}
+@media (max-width: 768px) {
+    .navtop {
+        padding: 10px;
+    }
+
+    .navtop-brand a {
+        font-size: 24px !important;
+    }
+
+    .navtop-icon {
+        font-size: 20px;
+    }
+
+    .toggle-menu {
+        font-size: 18px;
+    }
+
+    .menu-list a {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .navtop {
+        padding: 5px;
+    }
+
+    .navtop-brand a {
+        font-size: 18px !important;
+    }
+
+    .navtop-icon {
+        font-size: 18px;
+    }
+
+    .toggle-menu {
+        font-size: 16px;
+    }
+
+    .menu-list a {
+        font-size: 18px;
+        margin: 15px 0;
     }
 }

@@ -42,6 +42,7 @@ function App() {
                 <Routes>
                     <Route path="/login" element={<AdminLogin/>}></Route>
                     <Route path="/admin" element={<AdminDashboard/>}></Route>
+                    <Route path="/" element={<AdminDashboard/>}></Route>
                     <Route path="/inbox" element={<Inbox/>}></Route>
                     <Route path="/content-management" element={<ContentManagement/>}></Route>
                     <Route path="/orders" element={<Orders/>}></Route>

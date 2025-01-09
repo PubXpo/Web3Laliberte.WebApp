@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Table, Button, Modal, Form } from "react-bootstrap";
+import {Container, Table, Button, Modal, Form, Spinner} from "react-bootstrap";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
@@ -66,32 +66,47 @@ const ContentManagement = () => {
                     <title>Content Management | Admin Portal</title>
                 </Helmet>
             </HelmetProvider>
-
+            <div className="landscape-warning">
+                <div className="phone">
+                </div>
+                <div className="message">
+                    Please rotate your device!
+                </div>
+            </div>
             <Container fluid className="content-management-wrapper">
                 <div className="faqs-wrapper">
                     <div className="d-flex justify-content-between align-items-center mb-3">
                         <h3>Manage Frequently Asked Questions</h3>
-                        <Button onClick={() => { setSelectedFaq(null); setFaqForm({ question: "", answer: "" }); setShowFaqModal(true); }}>Add FAQ</Button>
+                        <Button onClick={() => {
+                            setSelectedFaq(null);
+                            setFaqForm({question: "", answer: ""});
+                            setShowFaqModal(true);
+                        }}>Add FAQ</Button>
                     </div>
                     <Table striped bordered hover>
                         <thead>
-                            <tr>
-                                <th>Question</th>
-                                <th>Answer</th>
-                                <th>Actions</th>
-                            </tr>
+                        <tr>
+                            <th>Question</th>
+                            <th>Answer</th>
+                            <th>Actions</th>
+                        </tr>
                         </thead>
                         <tbody>
-                            {faqs.map((faq, index) => (
-                                <tr key={index}>
-                                    <td>{faq.question}</td>
-                                    <td>{faq.answer}</td>
-                                    <td>
-                                        <Button variant="warning" onClick={() => { setSelectedFaq(faq); setFaqForm(faq); setShowFaqModal(true); }}><FaEdit /></Button>
-                                        <Button variant="danger" onClick={() => handleDeleteFaq(faq.id)} className="ml-2"><FaTrashAlt /></Button>
-                                    </td>
-                                </tr>
-                            ))}
+                        {faqs.map((faq, index) => (
+                            <tr key={index}>
+                                <td>{faq.question}</td>
+                                <td>{faq.answer}</td>
+                                <td>
+                                    <Button variant="warning" onClick={() => {
+                                        setSelectedFaq(faq);
+                                        setFaqForm(faq);
+                                        setShowFaqModal(true);
+                                    }}><FaEdit/></Button>
+                                    <Button variant="danger" onClick={() => handleDeleteFaq(faq.id)}
+                                            className="ml-2"><FaTrashAlt/></Button>
+                                </td>
+                            </tr>
+                        ))}
                         </tbody>
                     </Table>
                 </div>
@@ -127,7 +142,7 @@ const ContentManagement = () => {
                         <Button variant="primary" onClick={handleSaveFaq}>Save</Button>
                     </Modal.Footer>
                 </Modal>
-                <ToastContainer />
+                <ToastContainer/>
             </Container>
         </>
     );
