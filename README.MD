@@ -1,5 +1,3 @@
-# Project Name
-
 ## Description
 Welcome to **Web3 Laliberté**! This is a donation and gift fulfilment web application built with a modern tech stack, featuring a React frontend and a C# backend. The application provides robust API endpoints to manage contact logs, orders, and FAQs efficiently.
 
@@ -49,25 +47,25 @@ Explore the API documentation at [Swagger Documentation](http://localhost:4000/s
 ## API Endpoints
 
 ### Contact Logs
-- **GET** `/api/contactlogs` - Retrieve all contact logs
-- **GET** `/api/contactlogs/{id}` - Retrieve a contact log by ID
-- **POST** `/api/contactlogs` - Create a new contact log
-- **PUT** `/api/contactlogs/{id}` - Update a contact log by ID
-- **DELETE** `/api/contactlogs/{id}` - Delete a contact log by ID
+- **GET** `/api/v1/contactlogs` - Retrieve all contact logs
+- **GET** `/api/v1/contactlogs/{id}` - Retrieve a contact log by ID
+- **POST** `/api/v1/contactlogs` - Create a new contact log
+- **PUT** `/api/v1/contactlogs/{id}` - Update a contact log by ID
+- **DELETE** `/api/v1/contactlogs/{id}` - Delete a contact log by ID
 
 ### Orders
-- **GET** `/api/orders` - Retrieve all orders
-- **GET** `/api/orders/{id}` - Retrieve an order by ID
-- **POST** `/api/orders` - Create a new order
-- **PUT** `/api/orders/{id}` - Update an order by ID
-- **DELETE** `/api/orders/{id}` - Delete an order by ID
+- **GET** `/api/v1/orders` - Retrieve all orders
+- **GET** `/api/v1/orders/{id}` - Retrieve an order by ID
+- **POST** `/api/v1/orders` - Create a new order
+- **PUT** `/api/v1/orders/{id}` - Update an order by ID
+- **DELETE** `/api/v1/orders/{id}` - Delete an order by ID
 
 ### FAQs
-- **GET** `/api/faqs` - Retrieve all FAQs
-- **GET** `/api/faqs/{id}` - Retrieve an FAQ by ID
-- **POST** `/api/faqs` - Create a new FAQ
-- **PUT** `/api/faqs/{id}` - Update an FAQ by ID
-- **DELETE** `/api/faqs/{id}` - Delete an FAQ by ID
+- **GET** `/api/v1/faqs` - Retrieve all FAQs
+- **GET** `/api/v1/faqs/{id}` - Retrieve an FAQ by ID
+- **POST** `/api/v1/faqs` - Create a new FAQ
+- **PUT** `/api/v1/faqs/{id}` - Update an FAQ by ID
+- **DELETE** `/api/v1/faqs/{id}` - Delete an FAQ by ID
 
 ## License
 This project is licensed under the MIT License.
